@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Button, Layout, Menu } from "antd";
 import { DingdingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Connect from "./Connect";
 
 const { Header, Content, Footer } = Layout;
 
@@ -24,7 +25,7 @@ const AppLayout: FC = ({ children }) => {
           </Menu>
         </div>
         <div className="connect">
-          <Button type="primary">Connect Wallet</Button>
+          <Connect />
         </div>
       </Header>
       <Content>

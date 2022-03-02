@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { Button, Card, Col, Row } from "antd";
 import AppLayout from "../components/layouts/AppLayout";
-import "./Home.css";
 import { Link } from "react-router-dom";
 import useNFTData from "../hooks/useNFTData";
+import "./Home.css";
+import NFTForm from "../components/NFTForm";
 
 const { Meta } = Card;
 
@@ -22,9 +23,7 @@ const Home: FC = () => {
             Marketplace and shown <br /> to thousand of users{" "}
             <a href="/">Learn more</a>
           </p>
-          <Button shape="round" type="primary" className="apply-btn">
-            Apply here
-          </Button>
+          <NFTForm />
         </div>
         <div className="card-list-wrapper">
           <div className="title-wrapper">
@@ -36,13 +35,15 @@ const Home: FC = () => {
             <Row>
               {featuredItem.map(({ url, id, name }) => (
                 <Col xs={24} sm={24} md={12} lg={8} xl={6} key={id}>
-                  <Card
-                    hoverable
-                    style={{ margin: "0px 20px 20px 20px" }}
-                    cover={<img alt="example" src={url} />}
-                  >
-                    <Meta title={name} description="www.nft-world.com" />
-                  </Card>
+                  <Link to={`/marketplace/${id}`}>
+                    <Card
+                      hoverable
+                      style={{ margin: "0px 20px 20px 20px" }}
+                      cover={<img alt="example" src={url} />}
+                    >
+                      <Meta title={name} description="www.nft-world.com" />
+                    </Card>
+                  </Link>
                 </Col>
               ))}
             </Row>

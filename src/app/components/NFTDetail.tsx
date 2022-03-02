@@ -1,15 +1,12 @@
 import { TagOutlined } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import { FC } from "react";
+import { NFTItemInterface } from "../store/redux/appSlice";
 import "./NFTDetail.css";
 
-interface NFTDetailInterface {
-  url: string;
-  id: number | string;
-  name: string;
-}
+interface NFTDetailInterface extends NFTItemInterface {}
 
-const NFTDetail: FC<NFTDetailInterface> = ({ url, name, id }) => {
+const NFTDetail: FC<NFTDetailInterface> = ({ url, name, id, price }) => {
   return (
     <div>
       <Row>
@@ -26,7 +23,7 @@ const NFTDetail: FC<NFTDetailInterface> = ({ url, name, id }) => {
               <Row>
                 <Col>
                   <span className="crypto-price">
-                    <TagOutlined className="crypto-price-tag" /> 0.48 SOL
+                    <TagOutlined className="crypto-price-tag" /> {price} SOL
                   </span>
                 </Col>
                 <Col>
