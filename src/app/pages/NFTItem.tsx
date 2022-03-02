@@ -1,6 +1,7 @@
 import { Button, Col, Modal, Row } from "antd";
 import { FC } from "react";
 import { useMoralis } from "react-moralis";
+import { isMobile } from "react-device-detect";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import NFTDetail from "../components/NFTDetail";
@@ -14,12 +15,13 @@ interface NFTItemInterface {
 
 const NFTItem: FC<NFTItemInterface> = ({ id }) => {
   const navigate = useNavigate();
-
   const { getData } = useNFTData();
   const { user } = useMoralis();
   const dispatch = useDispatch();
   const { nftItems } = useSelector((state: RootState) => state.app);
   const data = getData(id);
+
+  const onPressBuy = () => {};
 
   const onDelete = (itemId: string | number) => {
     const data = nftItems.filter(({ id }) => Number(id) !== Number(itemId));
@@ -29,7 +31,7 @@ const NFTItem: FC<NFTItemInterface> = ({ id }) => {
 
   return (
     <Modal
-      width={"60%"}
+      width={isMobile ? "100%" : "60%"}
       visible={true}
       onCancel={() => navigate("/marketplace")}
       footer={[

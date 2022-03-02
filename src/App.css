@@ -52,6 +52,22 @@
     padding-left: 0px;
     padding-right: 0px;
   }
+  .ant-modal,
+  .ant-modal-content {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+  }
+  .ant-modal-body {
+    min-height: calc(100vh - 110px);
+  }
+  .ant-modal-close {
+    background-color: rgb(194, 191, 190);
+    border-radius: 50%;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 .page-title {
