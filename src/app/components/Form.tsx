@@ -61,6 +61,7 @@ const Form: FC<FormInterface> = ({ close }) => {
           )}
         </Col>
         <Col xs={24} sm={24} md={12} lg={11} xl={11}>
+          <h1>Create your NFT</h1>
           <ANTForm.Item
             label="Name"
             name="name"

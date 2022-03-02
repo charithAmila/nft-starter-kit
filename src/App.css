@@ -47,6 +47,13 @@
   padding-left: 100px;
   padding-right: 100px;
 }
+@media only screen and (max-width: 600px) {
+  .content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 .page-title {
   font-size: 40px;
 }
