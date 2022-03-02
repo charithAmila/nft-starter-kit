@@ -1,0 +1,24 @@
+.nft-detail-content {
+  padding: 10px;
+  padding-top: 0px;
+}
+.nft-detail-content .price-tag {
+  display: flex;
+  align-items: center;
+}
+.nft-detail-content .price-tag .crypto-price {
+  font-size: 40px;
+}
+.nft-detail-content .price-tag .usd-price {
+  font-size: 16px;
+  color: gray;
+}
+.crypto-price-tag {
+  font-size: 40px;
+  color: #1890ff;
+}
+.item-note {
+  padding-top: 20px;
+  font-size: 15px;
+  color: #787d83;
+}

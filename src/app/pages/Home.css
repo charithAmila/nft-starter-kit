@@ -1,0 +1,38 @@
+.home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.home .collection-submit {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home .collection-submit p {
+  font-size: 16px;
+}
+.home .collection-submit .apply-btn {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+.card-list-wrapper {
+  padding-top: 100px;
+}
+.card-list-wrapper h1 {
+  margin-left: 20px;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.card-list-wrapper img {
+  height: 400px;
+}
+
+.card-list-wrapper .title-wrapper {
+  display: flex;
+  align-items: center;
+}
